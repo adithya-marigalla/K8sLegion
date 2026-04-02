@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🛡️ K8sLegion: The Kubernetes Chaos Engine
 
 **Built by Marigalla Adithya (Multi Cloud & Distributed Systems Architect)**
@@ -26,6 +25,34 @@ K8sLegion is a specialized "Break-Fix" simulator designed for Architects & Platf
 - RBAC Hardening & Admission Controllers
 - Gateway API & Modern Ingress
 =======
-# K8sLegion
-K8sLegion is a specialized "Break-Fix" simulator designed for Architects &amp; Platform Engineers preparing for CKA, CKAD, CKS, and MAANG technical interviews. It moves beyond abstract tutorials into **parameter-driven recovery scenarios**.
->>>>>>> b9d80b726af99739f6d51051d37b2e1c35a01bd7
+⚙️ Prerequisites & Environment Setup
+Before running K8sLegion, ensure your lab environment (Control Plane and Worker Nodes) is prepared. These scripts are designed for a 1+2 Node Kubernetes Cluster running on Linux (Ubuntu/Debian recommended).
+
+1. Install Dependencies (Control Plane Only)
+The engine uses sshpass to automate commands across the cluster without manual password prompts.
+
+sudo apt-get update && sudo apt-get install sshpass git -y
+
+2. Prepare the Nodes (Control Plane & All Workers)
+For the scripts to interact with your nodes, SSH must be configured to allow root login with password authentication. Run the following block on every node in your cluster:
+
+# Enable Root Login and Password Authentication
+sudo sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+
+# Ensure OpenSSH Server is installed and running
+sudo apt-get install openssh-server -y
+sudo systemctl restart sshd
+
+# Set the root password to match the scripts (Default: beast)
+echo "root:beast" | sudo chpasswd
+
+3. Script Initialization
+After cloning the repository, grant execution permissions to the entire engine suite:
+
+chmod +x legion.sh break.sh validate.sh solution.sh reset.sh
+
+🛠️ Configuration Note
+Update the PASS variable at the top of each .sh file:
+
+PASS="your_secure_password"
