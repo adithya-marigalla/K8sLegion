@@ -44,8 +44,8 @@ sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/s
 sudo apt-get install openssh-server -y
 sudo systemctl restart sshd
 
-# Set the root password to match the scripts (Default: beast)
-echo "root:beast" | sudo chpasswd
+# Set the root password to match the scripts
+echo "root:your_secure_password" | sudo chpasswd
 
 3. Script Initialization
 After cloning the repository, grant execution permissions to the entire engine suite:
