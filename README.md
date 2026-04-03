@@ -2,7 +2,27 @@
 
 **Built by Marigalla Adithya (Multi Cloud & Distributed Systems Architect)**
 
-K8sLegion is a specialized "Break-Fix" simulator designed for Architects & Platform Engineers preparing for CKA, CKAD, CKS, and MAANG technical interviews. It moves beyond abstract tutorials into **parameter-driven recovery scenarios**.
+K8sLegion is a specialized Kubernetes CHAOS ENGINEERING simulator designed for Architects and Platform Engineers to replicate real-world production failure scenarios and Engineered to mirror the complexity of MAANG-scale infrastructure,K8sLegion transforms Kubernetes knowledge from command execution into system-level thinking—focusing on diagnosis, failure analysis, and recovery under pressure.
+
+## 💰 Zero-Cost, Local-First Infrastructure
+
+Unlike cloud-based sandboxes or subscription-driven platforms that are time-limited and costly, K8sLegion is built for the **local-first engineer mindset**.
+
+- 💯 **100% Free**  
+  No cloud bills, no hidden API costs, no usage limits.
+
+- 🧠 **Persistent Learning Environment**  
+  Your lab remains exactly where you left it—ideal for iterative learning and deep mastery on a local multi-node cluster.
+
+- 🖥️ **Hardware Agnostic**  
+  Designed to run efficiently on commodity hardware, turning any Mac/Linux system into a production-grade Kubernetes war room.
+
+- 🔐 **Privacy-Centric by Design**  
+  All simulations, configurations, and data remain local—no telemetry, no tracking, no external dependencies.
+
+---
+
+> K8sLegion empowers engineers to build **real-world debugging intuition** without external constraints—just like operating clusters in production environments.
 
 ## 🚀 Key Features
 * **50 Structured Scenarios**: From ETCD failures to complex Gateway API routing.
